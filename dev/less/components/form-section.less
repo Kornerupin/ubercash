@@ -1,0 +1,132 @@
+.form-section {
+
+	&__wrapper {
+		padding: 20px 15px;
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	&__title {
+		.font(20px,22px,#1f1f1f,800);
+		margin-top: 0;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	&__field {
+		margin-bottom: 15px;
+		padding-left: 25px;
+		padding-right: 10px;
+		position: relative;
+
+		&::after {
+			content: "";
+			width: 10px;
+			height: 10px;
+			background-color: #1f1f1f;
+			position: absolute;
+			top:5px;
+			left:2px;
+			transform: rotate(45deg);
+			transition: .3s;
+		}
+
+		&-title {
+			.font(16px,20px,#1f1f1f,400);
+			display: block;
+			margin-bottom: 7px;
+			text-align: left;
+			transition: .3s;
+		}
+
+		&-input {
+			display: block;
+			.font(16px,20px,#1f1f1f,400);
+			width: 100%;
+			padding: 10px 0;
+			border: none;
+			border-bottom: 2px solid #1f1f1f;
+			outline: none;
+			background-color: transparent;
+			transition: .3s;
+			padding-right: 40px;
+
+			&:active{
+				border-bottom-color: @darkYellow;
+			}
+
+			&::placeholder {
+				.font(16px,20px,#ccc,100);
+				font-style: italic;
+			}
+		}
+
+		&:hover {
+
+			.form-section__field-title {
+				color:@darkYellow;
+			}
+
+			.form-section__field-input {
+				border-bottom-color: @darkYellow;
+			}
+
+			&::after {
+				background-color: @darkYellow;
+			}
+		}
+	}
+
+	&__button {
+		display: inline-block;
+		.font(18px,22px,#1f1f1f,600);
+		padding: 10px 15px;
+		border: 2px solid #1f1f1f;
+		box-shadow:1px 2px 3px #1f1f1f;
+		background-color: #fff;
+		border-radius: 6px;
+		cursor: pointer;
+		transition: .3s;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-top: 20px;
+
+		&:hover {
+			box-shadow: 1px 2px 3px #ccc;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.form-section__wrapper {
+		max-width: 800px;
+	}
+
+	.form-section__form {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.form-section__field {
+		width:50%;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 25px;
+		margin-bottom: 0;
+		padding-bottom: 20px;
+
+		&::after {
+			top:0;
+			left:15px;
+			margin-left: -5px;
+		}
+	}
+
+	.form-section__button {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}

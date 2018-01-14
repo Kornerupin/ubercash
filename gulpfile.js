@@ -34,7 +34,10 @@ gulp.task('styles', function () {
 gulp.task('css-minify', ['styles'], function () {
     return gulp.src([
         'dev/css/normalize.css',
-        'dev/css/style.css'
+        'dev/css/style.css',
+        'dev/css/slick.css',
+        'dev/css/slick-theme.css',
+        'dev/css/nprogress.css'
     ])
         .pipe(concatCss("style.css"))
         .pipe(cssnano())
@@ -49,7 +52,7 @@ gulp.task('browser-sync', function () {
     browserSync({
         server: {
             baseDir: 'production',
-            index: "index.html"
+            index: "time.html"
         },
         notify: false
     })
@@ -59,7 +62,13 @@ gulp.task('browser-sync', function () {
 
 //scripts
 gulp.task('libs', function () {
-    gulp.src('node_modules/jquery/dist/jquery.min.js')
+    gulp.src(['node_modules/jquery/dist/jquery.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/nprogress/nprogress.js',
+        'node_modules/waypoints/lib/jquery.waypoints.min.js',
+        'node_modules/counterup/jquery.counterup.min.js',
+        'node_modules/typed.js/lib/typed.min.js'
+        ])
         .pipe(concat('lib.js'))
         .pipe(uglify())
         .pipe(gulp.dest('production/assets'))

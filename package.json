@@ -18,6 +18,7 @@
   "homepage": "https://github.com/DmitrijPerejro/Phantom#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "counterup": "^1.0.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
@@ -27,6 +28,10 @@
     "gulp-less": "^3.3.2",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "nprogress": "^0.2.0",
+    "slick-carousel": "^1.8.1",
+    "typed.js": "^2.0.6",
+    "waypoints": "^4.0.1"
   }
 }
