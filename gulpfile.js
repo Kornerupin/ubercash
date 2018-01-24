@@ -52,7 +52,7 @@ gulp.task('browser-sync', function () {
     browserSync({
         server: {
             baseDir: 'production',
-            index: "time.html"
+            index: "index.html"
         },
         notify: false
     })
@@ -63,9 +63,9 @@ gulp.task('browser-sync', function () {
 //scripts
 gulp.task('libs', function () {
     gulp.src(['node_modules/jquery/dist/jquery.min.js',
+        'node_modules/waypoints/lib/jquery.waypoints.min.js',
         'node_modules/slick-carousel/slick/slick.min.js',
         'node_modules/nprogress/nprogress.js',
-        'node_modules/waypoints/lib/jquery.waypoints.min.js',
         'node_modules/counterup/jquery.counterup.min.js',
         'node_modules/typed.js/lib/typed.min.js'
         ])

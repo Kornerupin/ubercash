@@ -50,11 +50,14 @@
 			border-bottom: 2px solid #1f1f1f;
 			outline: none;
 			background-color: transparent;
-			transition: .3s;
+			transition: .1s;
 			padding-right: 40px;
+			padding-left: 10px;
 
-			&:active{
-				border-bottom-color: @darkYellow;
+			&:focus{
+				border-bottom-color: @lightYellow;
+
+				padding-left: 0;
 			}
 
 			&::placeholder {

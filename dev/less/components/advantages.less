@@ -108,20 +108,6 @@
 			margin-bottom: 0;
 		}
 
-		&:hover {
-			transform:scale(1.03);
-			box-shadow: 0px 1px 5px @darkYellow;
-			border-radius: 4px;
-
-			.advantages__text {
-				color:@darkYellow;
-			}
-
-			.advantages__icon svg {
-				transform: rotateX(0deg);
-				fill:@darkYellow;
-			}
-		}
 	}
 
 	&__social-icon {
@@ -195,6 +181,10 @@
 }
 
 @media (min-width: 768px) {
+
+	.advantages__wrapper {
+		padding: 30px;
+	}
 
 	.advantages__item {
 		width:33.3%;

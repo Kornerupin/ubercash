@@ -1,0 +1,78 @@
+.copy {
+
+	&__wrapper {
+		padding:20px 15px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__text {
+		margin: 0;
+		.font(14px,18px,#1f1f1f,100);
+		max-width: 65%;
+	}
+
+	& .dev-u {
+		max-width: 35%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		&:hover {
+
+			svg {
+				fill:@darkYellow;
+			}
+		}
+	}
+
+	& .dev {
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		& svg {
+			width:16px;
+			height:16px;
+		}
+
+		&--s {
+			width: 12px;
+			height:12px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			& svg {
+				width:6px;
+				height:6px;
+			}
+		}
+
+		&--if {
+
+			svg {
+				transition: .2s;
+			}
+		}
+
+		&--is {
+			
+			svg {
+				transition: .4s;
+			}
+		}
+
+		&--it {
+			
+			svg {
+				transition: .6s;
+			}
+		}
+	}
+}
